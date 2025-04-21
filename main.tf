@@ -13,6 +13,16 @@ resource "aws_vpc" "main" {
   }
 }
 
+# Enable EC2 Instances
+
+# Enable Public Subnets
+
+# Enable Private Subnets
+
+# Enable Public Route Tables
+
+# Enable Private Route Tables
+
 # Enable VPC Flow Logs to S3
 resource "aws_flow_log" "vpc_flow_logs" {
   log_destination      = aws_s3_bucket.flow_logs_bucket.arn
