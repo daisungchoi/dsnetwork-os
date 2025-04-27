@@ -38,6 +38,15 @@ resource "aws_subnet" "main" {
 # Enable Public Route Tables
 
 # Enable Private Route Tables
+resource "aws_route_table" "main" {
+  vpc_id = aws_vpc.main.id
+
+  # since this is exactly the route AWS will create, the route will be adopted
+  route {
+    cidr_block = "10.0.1.0/24"
+    gateway_id = "local"
+  }
+}
 
 # Enable VPC Flow Logs to S3
 resource "aws_flow_log" "vpc_flow_logs" {
