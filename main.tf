@@ -110,7 +110,7 @@ resource "aws_opensearch_domain" "flow_logs_os" {
 
   ebs_options {
     ebs_enabled = true
-    volume_size = 10
+    volume_size = 20
   }
 
   access_policies = <<POLICY
